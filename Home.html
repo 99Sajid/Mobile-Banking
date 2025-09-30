@@ -35,11 +35,11 @@
     </div>
 
     <div class=" grid grid-cols-3 gap-4  min-h-[200px] ">
-        <div class="rounded-xl border-2 border-gray-200   text-center p-3 ">
+        <div id="add-btn" class="rounded-xl border-2 border-gray-200   text-center p-3 ">
              <img src="./assets/wallet1.png" class="mx-auto" alt="">
             <h2>Add Money</h2>
             </div>
-            <div class="rounded-xl border-2 border-gray-200   text-center p-3 ">
+            <div id="cashout-btn" class="rounded-xl border-2 border-gray-200   text-center p-3 ">
              <img src="./assets/send1.png" class="mx-auto" alt="">
             <h2>Cashout</h2>
             </div>
@@ -63,7 +63,8 @@
     </nav>
 <!-- creating lower section  -->
     <div class="parent-form-section  max-w-lg mx-auto">
-        <div class="">
+        <!-- add money form section  -->
+        <div id="add-perent" style="display: none;  ">
             <h1 class="my-5 font-bold">Add Money</h1>
             <form action="" class=" bg-white rounded-b-xl p-3">
                 <div class="mb-3">
@@ -101,7 +102,46 @@
 
             </form>
         </div>
-   
+         <!-- cash out form section  -->
+       <div id="cashout-perent" style="display: none;">
+            <h1 class="my-5 font-bold">Cashout</h1>
+            <form action="" class=" bg-white rounded-b-xl p-3">
+                <div class="mb-3">
+                    <h2 class="font-semibold">Select A Bank</h2>
+                    <select id="add-bank" class="select rounded-2xl bg-[#f4f5f7] mt-3 w-full" >
+                        <option disabled selected>Pick a Bank</option>
+                        <option>Brak Bank</option>
+                        <option>City Bank</option>
+                        <option>Dutch Bangla Bank</option>
+                        </select>
+                </div>
+                
+                    
+                <div class="mb-3">
+            <label class="font-semibold" for="">Bank Account Number</label><br>
+            <input type="text" id="add-account-number" placeholder="Enter 11 digit account number" 
+            class="input bg-[#f4f5f7] mt-3 w-full" />
+
+        </div>
+                
+                    
+        <div class="mb-3">
+            <label class="font-semibold" for="">Amount to Add</label><br>
+            <input type="text" id="add-ammount" placeholder="Add Amount to withdraw" 
+            class=" w-full input bg-[#f4f5f7] mt-3" />
+
+        </div>        
+       <div class="mb-3">
+            <label class="font-semibold" for="">Pin Number</label><br>
+            <input type="text" id="add-pin" placeholder="Enter 4 digit pin number" 
+            class="input w-full bg-[#f4f5f7] mt-3" />
+
+        </div>  
+                <button  id="login-btn" class="w-full rounded-2xl mt-3 btn text-white bg-[#0374F2]">Add Money</button>
+
+            </form>
+        </div>
+
     </div>
     <script src="./home.js"></script>
 </body>

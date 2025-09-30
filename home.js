@@ -8,6 +8,7 @@ document.getElementById("login-btn").addEventListener('click',function(e){
     const userPin=parseInt(document.getElementById('add-pin').value) ;
     // console.log(bank,accountNumber,ammount,pin);
     const availabeMoney=parseInt(document.getElementById('availabe-money').innerText);
+    
     if(accountNumber.length!=11){
         alert("please provide valid account Number");
         return;
@@ -20,5 +21,21 @@ document.getElementById("login-btn").addEventListener('click',function(e){
     const totalMoney=ammount+availabeMoney;
 
     document.getElementById('availabe-money').innerText=totalMoney;
+
+})
+
+
+// toggle feature 
+
+document.getElementById("add-btn").addEventListener('click',function(){
+    document.getElementById('cashout-perent').style.display="none"
+    document.getElementById('add-perent').style.display="block"
+    
+
+})
+document.getElementById("cashout-btn").addEventListener('click',function(){
+    document.getElementById('add-perent').style.display="none";
+    document.getElementById('cashout-perent').style.display="block";
+    
 
 })
