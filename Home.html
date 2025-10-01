@@ -47,15 +47,15 @@
              <img src="./assets/money1.png" class="mx-auto" alt="">
             <h2>Transfer Money</h2>
             </div>
-            <div class="rounded-xl border-2 border-gray-200   text-center p-3 ">
+            <div id="getbonus-btn" class="rounded-xl border-2 border-gray-200   text-center p-3 ">
              <img src="./assets/bonus1.png" class="mx-auto" alt="">
             <h2>Get Bonus</h2>
             </div>
-            <div class="rounded-xl border-2 border-gray-200   text-center p-3 ">
+            <div id="paybill-btn" class="rounded-xl border-2 border-gray-200   text-center p-3 ">
              <img src="./assets/purse1.png" class="mx-auto" alt="">
             <h2>Pay Bill</h2>
             </div>
-            <div class="rounded-xl border-2 border-gray-200   text-center p-3 ">
+            <div id="transactions-btn" class="rounded-xl border-2 border-gray-200   text-center p-3 ">
              <img src="./assets/money1.png" class="mx-auto" alt="">
             <h2>Transactions</h2>
             </div>
@@ -145,15 +145,107 @@
         <div id="transfer-perent" style="display: none;">
             <h1 class="my-5 font-bold">Transfer Money</h1>
             <form action="" class="  bg-white rounded-b-xl p-3">
-                <!-- <div class="mb-3">
-                    <h2 class="font-semibold">Select A Bank</h2>
+                
+                
+                    
+                <div class="mb-3">
+            <label class="font-semibold" for="">User Account Number</label><br>
+            <input type="text" id="transfer-number" placeholder="Enter 11 digit number" 
+            class="input bg-[#f4f5f7] mt-3 rounded-2xl w-full" />
+
+        </div>
+                
+                    
+        <div class="mb-3">
+            <label class="font-semibold" for="">Amount</label><br>
+            <input type="text" id="transfer-ammount" placeholder="Enter Amount to Transfer" 
+            class=" w-full input bg-[#f4f5f7] mt-3" />
+
+        </div>        
+       <div class="mb-3">
+            <label class="font-semibold" for="">Pin Number</label><br>
+            <input type="text" id="transfer-pin" placeholder="Enter 4 digit pin number" 
+            class="input w-full bg-[#f4f5f7] mt-3" />
+
+        </div>  
+                <button  id="transfer-login-btn" class="w-full rounded-2xl mt-3 btn text-white bg-[#0374F2]">Send Now</button>
+
+            </form>
+        </div>
+        <!-- Get bonus form section -->
+        <div id="getbonus-perent" style="display: none;">
+            <h1 class="my-5 font-bold">Get Bonus</h1>
+            <form action="" class="  bg-white rounded-b-xl p-3">
+                
+                
+                    
+            <!-- <div class="mb-3">
+            <label class="font-semibold" for="">User Account Number</label><br>
+            <input type="text" id="transfer-number" placeholder="Enter 11 digit number" 
+            class="input bg-[#f4f5f7] mt-3 rounded-2xl w-full" />
+            </div>
+                
+                    
+            <div class="mb-3">
+            <label class="font-semibold" for="">Amount</label><br>
+            <input type="text" id="transfer-ammount" placeholder="Enter Amount to Transfer" 
+            class=" w-full input bg-[#f4f5f7] mt-3" />
+            </div>         -->
+
+           <div class="mb-3">
+            <label class="font-semibold" for="">Enter Bonus Coupon</label><br>
+            <input type="text" id="transfer-pin" placeholder="Enter your coupon" 
+            class="rounded-2xl input w-full bg-[#f4f5f7] mt-3" />
+
+          </div>  
+                <button  id="transfer-login-btn" class="w-full rounded-2xl mt-3 btn text-white bg-[#0374F2]">Get Bonus</button>
+
+            </form>
+        </div>
+        <!-- Pay bill form section -->
+        <div id="paybill-perent" style="display: none;" >
+            <h1 class="my-5 font-bold">Pay Bill</h1>
+            <form action="" class=" bg-white rounded-b-xl p-3">
+                <div class="mb-3">
+                    <h2 class="font-semibold">Select To Pay</h2>
                     <select id="add-bank" class="select rounded-2xl bg-[#f4f5f7] mt-3 w-full" >
-                        <option disabled selected>Pick a Bank</option>
-                        <option>Brak Bank</option>
-                        <option>City Bank</option>
-                        <option>Dutch Bangla Bank</option>
+                        <option disabled selected>Pick back</option>
+                        <option>Brak</option>
+                        <option>City</option>
+                        <option>Dutch</option>
                         </select>
-                </div> -->
+                </div>
+                
+                    
+                <div class="mb-3">
+            <label class="font-semibold" for="">Biller Account Number</label><br>
+            <input type="text" id="add-account-number" placeholder="Enter account number" 
+            class="input bg-[#f4f5f7] mt-3 w-full" />
+
+        </div>
+                
+                    
+        <div class="mb-3">
+            <label class="font-semibold" for="">Amount to Pay</label><br>
+            <input type="text" id="add-ammount" placeholder="Add Amount to pay" 
+            class=" w-full input bg-[#f4f5f7] mt-3" />
+
+        </div>        
+       <div class="mb-3">
+            <label class="font-semibold" for="">Pin Number</label><br>
+            <input type="text" id="add-pin" placeholder="Enter 4 digit pin number" 
+            class="input w-full bg-[#f4f5f7] mt-3" />
+
+        </div>  
+                <button  id="login-btn" class="w-full rounded-2xl mt-3 btn text-white bg-[#0374F2]">Pay Now</button>
+
+            </form>
+        </div>
+        <!-- Transactions form section -->
+        <div id="transactions-perent" style="display: none;">
+            <h1 class="my-5 font-bold">Transaction History</h1>
+            <form action="" class="  bg-white rounded-b-xl p-3">
+                
                 
                     
                 <div class="mb-3">

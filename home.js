@@ -87,18 +87,49 @@ document.getElementById("add-btn").addEventListener('click',function(){
     document.getElementById('cashout-perent').style.display="none"
     document.getElementById('add-perent').style.display="block"
     document.getElementById('transfer-perent').style.display="none"
+    document.getElementById('getbonus-perent').style.display="none"
+    document.getElementById('paybill-perent').style.display="none"
+    document.getElementById('transactions-perent').style.display="none"
 
 })
 document.getElementById("cashout-btn").addEventListener('click',function(){
     document.getElementById('add-perent').style.display="none";
     document.getElementById('cashout-perent').style.display="block";
     document.getElementById('transfer-perent').style.display="none"
-    
+    document.getElementById('getbonus-perent').style.display="none"
+    document.getElementById('paybill-perent').style.display="none"
+    document.getElementById('transactions-perent').style.display="none"
 
 })
 document.getElementById("transfer-btn").addEventListener('click',function(){
     document.getElementById('cashout-perent').style.display="none"
     document.getElementById('add-perent').style.display="none"
     document.getElementById('transfer-perent').style.display="block"
-
+    document.getElementById('getbonus-perent').style.display="none"
+    document.getElementById('paybill-perent').style.display="none"
+    document.getElementById('transactions-perent').style.display="none"
+})
+document.getElementById("getbonus-btn").addEventListener('click',function(){
+    document.getElementById('cashout-perent').style.display="none"
+    document.getElementById('add-perent').style.display="none"
+    document.getElementById('transfer-perent').style.display="none"
+    document.getElementById('getbonus-perent').style.display="block"
+    document.getElementById('paybill-perent').style.display="none"
+    document.getElementById('transactions-perent').style.display="none"
+})
+document.getElementById("paybill-btn").addEventListener('click',function(){
+    document.getElementById('cashout-perent').style.display="none"
+    document.getElementById('add-perent').style.display="none"
+    document.getElementById('transfer-perent').style.display="none"
+    document.getElementById('getbonus-perent').style.display="none"
+    document.getElementById('paybill-perent').style.display="block"
+    document.getElementById('transactions-perent').style.display="none"
+})
+document.getElementById("transactions-btn").addEventListener('click',function(){
+    document.getElementById('cashout-perent').style.display="none"
+    document.getElementById('add-perent').style.display="none"
+    document.getElementById('transfer-perent').style.display="none"
+    document.getElementById('getbonus-perent').style.display="none"
+    document.getElementById('paybill-perent').style.display="none"
+    document.getElementById('transactions-perent').style.display="block"
 })
