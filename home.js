@@ -53,17 +53,52 @@ document.getElementById('out-login-btn').addEventListener('click',function(e){
     document.getElementById('availabe-money').innerText=totalMoney;
 })
 
+//Transfer Money section
+
+document.getElementById('transfer-login-btn').addEventListener('click',function(e){
+    e.preventDefault()
+    const transferAccountNumber=document.getElementById("transfer-number").value ;
+    const transferAmount=parseInt(document.getElementById('transfer-ammount').value) ;
+    const userPin=parseInt(document.getElementById('transfer-pin').value) ;
+    const availabeMoney=parseInt(document.getElementById('availabe-money').innerText);
+
+
+    if(transferAccountNumber.length!=11){
+        alert("please provide valid account Number");
+        return;
+    }
+    if(pin!==userPin ){
+        alert("Please provide valid pin number");
+        return;
+    }
+    if(availabeMoney-transferAmount<0){
+        alert("Insufficient fund!");
+        return;
+    }
+    const totalMoney=availabeMoney-transferAmount;
+
+    document.getElementById('availabe-money').innerText=totalMoney;
+
+})
+
 // toggle feature 
 
 document.getElementById("add-btn").addEventListener('click',function(){
     document.getElementById('cashout-perent').style.display="none"
     document.getElementById('add-perent').style.display="block"
-    
+    document.getElementById('transfer-perent').style.display="none"
 
 })
 document.getElementById("cashout-btn").addEventListener('click',function(){
     document.getElementById('add-perent').style.display="none";
     document.getElementById('cashout-perent').style.display="block";
+    document.getElementById('transfer-perent').style.display="none"
     
+
+})
+document.getElementById("transfer-btn").addEventListener('click',function(){
+    document.getElementById('cashout-perent').style.display="none"
+    document.getElementById('add-perent').style.display="none"
+    document.getElementById('transfer-perent').style.display="block"
 
 })
