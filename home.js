@@ -1,4 +1,6 @@
 const pin=3333;
+
+// add money feature
 document.getElementById("login-btn").addEventListener('click',function(e){
     e.preventDefault()
     // console.log("is working!");
@@ -24,6 +26,32 @@ document.getElementById("login-btn").addEventListener('click',function(e){
 
 })
 
+//cashout feature
+document.getElementById('out-login-btn').addEventListener('click',function(e){
+    e.preventDefault()
+    //console.log("its working!")
+    const mobileNumber=document.getElementById("out-number").value ;
+    const cashoutAmount=parseInt(document.getElementById('out-ammount').value) ;
+    const userPin=parseInt(document.getElementById('out-pin').value) ;
+    const availabeMoney=parseInt(document.getElementById('availabe-money').innerText);
+
+
+    if(mobileNumber.length!=11){
+        alert("please provide valid account Number");
+        return;
+    }
+    if(pin!==userPin ){
+        alert("Please provide valid pin number");
+        return;
+    }
+    if(availabeMoney-cashoutAmount<0){
+        alert("Insufficient balance");
+        return;
+    }
+    const totalMoney=availabeMoney-cashoutAmount;
+
+    document.getElementById('availabe-money').innerText=totalMoney;
+})
 
 // toggle feature 
 
